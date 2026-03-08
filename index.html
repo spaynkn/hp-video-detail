@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H!P Video DB - Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="H!P Video DB" class="logo-img">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Detail</a></li>
+                    <li><a href="channel.html">Channel</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filter-tabs" id="categoryTabs">
+            <button class="tab-btn active" data-category="すべて">すべて</button>
+            <button class="tab-btn" data-category="ライブ">ライブ</button>
+            <button class="tab-btn" data-category="レコーディング">レコーディング</button>
+            <button class="tab-btn" data-category="ダンスレッスン">ダンスレッスン</button>
+        </section>
+
+        <div class="top-layout-group">
+            <section class="search-section">
+                <div class="search-bar">
+                    <div class="input-wrapper">
+                        <input type="text" id="searchInput" placeholder="動画詳細名を入力...">
+                        <button id="clearBtn" title="クリア">&times;</button>
+                    </div>
+                    <button id="searchBtn">検索</button>
+                </div>
+            </section>
+            
+            <aside class="ad-space ad-top">
+                <div class="ad-label">ADVERTISEMENT</div>
+                <div class="ad-placeholder">Amazon Ad Space (300x100)</div>
+            </aside>
+        </div>
+
+        <section class="results-info">
+            <div id="resultCount">検索結果：0件</div>
+            <div class="controls-group">
+                <div class="control-item">
+                    <label for="sortOrder">順序：</label>
+                    <select id="sortOrder">
+                        <option value="newest">新着順</option>
+                        <option value="oldest">古い順</option>
+                    </select>
+                </div>
+                <div class="control-item">
+                    <label for="pageSize">表示：</label>
+                    <select id="pageSize">
+                        <option value="12">12件</option>
+                        <option value="24">24件</option>
+                        <option value="48">48件</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div class="video-grid" id="videoGrid"></div>
+
+        <nav class="pagination" id="pagination"></nav>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <iframe id="youtubePlayer" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
