@@ -32,7 +32,7 @@ body {
 .logo-link { display: flex; align-items: center; text-decoration: none; }
 /* ヘッダー：ロゴの大きさを2倍に変更 */
 .logo-img { 
-    height: 90px; /* 45pxから90pxに変更 */
+    height: 60px; /* 45pxから90pxに変更 */
     width: auto; 
     max-width: 400px; /* 最大幅も余裕を持たせて調整 */
     object-fit: contain; 
