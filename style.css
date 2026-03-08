@@ -18,10 +18,26 @@ body {
 .container { max-width: 1100px; margin: 0 auto; padding: 20px; width: 100%; }
 
 /* ヘッダー */
-.site-header { background: var(--primary-color); color: white; padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+/* ヘッダー全体の高さを自動調整 */
+.site-header { 
+    background: var(--primary-color); 
+    color: white; 
+    padding: 5px 0; /* ロゴが大きくなった分、上下パディングを少し削るとスッキリします */
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
 .header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .logo-link { display: flex; align-items: center; text-decoration: none; }
-.logo-img { height: 45px; width: auto; object-fit: contain; }
+/* ヘッダー：ロゴの大きさを2倍に変更 */
+.logo-img { 
+    height: 90px; /* 45pxから90pxに変更 */
+    width: auto; 
+    max-width: 400px; /* 最大幅も余裕を持たせて調整 */
+    object-fit: contain; 
+    display: block; /* 余計な隙間を消すために追加 */
+}
 
 .main-nav ul { display: flex; list-style: none; }
 .main-nav a { color: #ccc; text-decoration: none; margin-left: 20px; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
